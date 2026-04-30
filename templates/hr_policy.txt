@@ -1,0 +1,9 @@
+Subject: Updated HR policy: Please review
+
+Hi {{name}},
+
+We have updated a company policy that may affect your benefits. Review the summary here: {{click_url}}
+
+If this looks suspicious, please report it: {{report_url}}
+
+HR Team
