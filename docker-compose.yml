@@ -1,0 +1,40 @@
+version: "3.8"
+
+services:
+  phish-sim:
+    build: .
+    container_name: phish-sim
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      - SMTP_HOST=mailhog
+      - SMTP_PORT=1025
+      - FROM_ADDR=${FROM_ADDR:-security-sim@example.local}
+      - BASE_URL=${BASE_URL:-http://phish-sim:5000}
+    depends_on:
+      - mailhog
+    networks:
+      - sim-net
+    ports:
+      - "5000:5000"   # optional: expose Flask for local browser access
+    volumes:
+      - ./:/app
+
+  mailhog:
+    image: mailhog/mailhog:latest
+    container_name: mailhog
+    restart: unless-stopped
+    ports:
+      - "1025:1025"   # SMTP port for apps to send to
+      - "8025:8025"   # MailHog web UI
+    networks:
+      - sim-net
+    volumes:
+      - mailhog-data:/data
+
+networks:
+  sim-net:
+    driver: bridge
+
+volumes:
+  mailhog-data:

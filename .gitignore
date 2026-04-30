@@ -1,0 +1,12 @@
+# Database and exports
+sim.db
+exports/
+# Environment
+.env
+# Python
+__pycache__/
+*.pyc
+venv/
+# Editor
+.vscode/
+.idea/

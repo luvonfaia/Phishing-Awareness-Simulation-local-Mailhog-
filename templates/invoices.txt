@@ -1,0 +1,9 @@
+Subject: Invoice attached for recent order
+
+Hi {{name}},
+
+Please view the invoice for your recent order: {{click_url}}
+
+If you did not place this order, report it immediately: {{report_url}}
+
+Billing

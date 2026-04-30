@@ -1,0 +1,10 @@
+Subject: Action required: IT ticket update
+
+Hello {{name}},
+
+Our IT team has created a ticket for your recent request. Please review the ticket details here: {{click_url}}
+
+If you did not request this, please report it: {{report_url}}
+
+Thanks,
+IT Support

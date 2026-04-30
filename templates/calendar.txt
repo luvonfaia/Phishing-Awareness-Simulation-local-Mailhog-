@@ -1,0 +1,9 @@
+Subject: Calendar invite: Team sync tomorrow
+
+Hello {{name}},
+
+You have been invited to a team sync. View details and RSVP here: {{click_url}}
+
+If this is unexpected, report it: {{report_url}}
+
+Scheduling

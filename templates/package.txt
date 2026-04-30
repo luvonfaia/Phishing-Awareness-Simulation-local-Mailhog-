@@ -1,0 +1,9 @@
+Subject: Delivery attempt: package awaiting pickup
+
+Hello {{name}},
+
+A delivery service attempted to deliver a package to you. Track and schedule redelivery here: {{click_url}}
+
+If you weren't expecting a package, report it: {{report_url}}
+
+Logistics
