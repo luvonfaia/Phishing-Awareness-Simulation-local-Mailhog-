@@ -1,0 +1,4 @@
+email,cohort,employee_id
+alice@test.local,engineering,1001
+bob@test.local,marketing,1002
+carol@test.local,finance,1003
