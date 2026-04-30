@@ -1,20 +1,14 @@
+# Contributing
 
----
+## Code style
+- Keep changes small and focused.
+- Add tests for new behavior.
 
-### 2) `Dockerfile`
-```dockerfile
-FROM python:3.11-slim
+## Safety review
+Any change that affects sending behavior or templates must:
+1. Be reviewed by at least one maintainer.
+2. Include a safety checklist: target scope, excluded groups, test plan (MailHog), and rollback plan.
 
-WORKDIR /app
-
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
-
-COPY . .
-
-ENV FLASK_APP=phish_sim.py
-ENV FLASK_RUN_HOST=0.0.0.0
-
-EXPOSE 5000
-
-CMD ["python", "phish_sim.py"]
+## Tests & CI
+- Run `pytest` locally.
+- Add tests for new features and ensure CI passes before merging.
